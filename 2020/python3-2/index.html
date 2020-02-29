@@ -10,14 +10,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="RCKLOS,"> 
-    <meta name="description" content="What is description?,前言虽然学过python，但不系统，以此想跟着课程学习，记以此笔记
-目录第一章 初识Python程序
-第二章 程序基本构成
-第三章 控制结构
-第四章 函数
-第五章 复合数据类型
-第六章 文件读写
-第,"> 
+    <meta name="description" content="What is description?,前言此文Python3(二)适合于已经初步理解C语言程序基本构成的朋友阅读，部分内容会联系C语言来讨论，若不理解这些内容也无大碍，因为此文的内容与后面文章的部分内容交叉，故可跳过不理解的部分。
+目录,"> 
     <meta name="author" content="RCKLOS"> 
     <link rel="alternative" href="atom.xml" title="RCKLOS" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -74,7 +68,7 @@
 
         </div>
         <div class="content markdown">
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>虽然学过python，但不系统，以此想跟着课程学习，记以此笔记</p>
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>此文<a href="/2020/python3-2/">Python3(二)</a>适合于已经初步理解C语言程序基本构成的朋友阅读，部分内容会联系C语言来讨论，若不理解这些内容也无大碍，因为此文的内容与后面文章的部分内容交叉，故可跳过不理解的部分。</p>
 <h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><p><a href="/2020/Python3-1/">第一章 初识Python程序</a></p>
 <p><a href="/2020/python3-2/">第二章 程序基本构成</a></p>
 <p><a href="/2020/python3-3/">第三章 控制结构</a></p>
@@ -84,8 +78,10 @@
 <p><a href="/2020/python3-7/">第七章 数据可视化</a></p>
 <p><a href="/2020/python3-8/">第八章 图像处理</a></p>
 <hr>
-<h3 id="第二章-程序基本构成"><a href="#第二章-程序基本构成" class="headerlink" title="第二章 程序基本构成"></a>第二章 程序基本构成</h3><h4 id="学习前言"><a href="#学习前言" class="headerlink" title="学习前言"></a>学习前言</h4><p>以《数据结构与算法》为出发点：程序 = 数据结构 + 算法</p>
+<h3 id="第二章-程序基本构成"><a href="#第二章-程序基本构成" class="headerlink" title="第二章 程序基本构成"></a>第二章 程序基本构成</h3><hr>
+<h4 id="学习前言"><a href="#学习前言" class="headerlink" title="学习前言"></a>学习前言</h4><p>以《数据结构与算法》为出发点：程序 = 数据结构 + 算法</p>
 <p>但要从程序代码划分，可分出：    程序  =工具         + 逻辑</p>
+<hr>
 <h4 id="学习正文"><a href="#学习正文" class="headerlink" title="学习正文"></a>学习正文</h4><ul>
 <li><p>Python程序的基本组成</p>
 <p>Python源程序 = 头部语句块  + 函数语句块  + 主程序语句块</p>
@@ -97,13 +93,144 @@
 
 <p>为绘画提供画笔：</p>
 <p>如上所述的”turtle” 就是一个模块，也就是工具，如手工绘画需要画笔作为工具，程序绘画也需要画笔相关的程序，所以导入(import)了turtle模块，即导入了turtle画笔工具。</p>
-<p>为画笔提供颜料：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置画笔为灰色(gray)</span></span><br><span class="line">turtle.color(<span class="string">"gray"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注释</p>
+<p>会敲代码的人真的不一定看得懂自己的代码，同样的，看得懂代码的人也不一定会敲代码。</p>
+<p>如高中时期，有时候看数学的大题答案时，还真不一定知道某一部分的公式为什么要这样转换，如果答案下面附带着解析，那就更方便于理解答案了。</p>
+<p>所以，注释的作用就是解析的作用，也是程序员用来以后自己查看代码时能够迅速回想起当时编写时的逻辑，也能帮助他人理解自己的代码。</p>
+</li>
+</ul>
+<p>函数语句块：函数定义或者类定义</p>
+<ul>
+<li><p>函数定义</p>
+<p>函数是用于包含逻辑程序代码并拥有其自身功能的结构</p>
+<p>如数学中定义函数 f(x) = x+1</p>
+<p>其中<em>x+1</em>在程序中为逻辑代码，即函数f(x)所包含的”程序“代码</p>
+<p>函数在代码中的地位：</p>
+<p>正常的逻辑程序代码都是需要写在其相对应的函数中的，程序的执行，总是需要一个起点作为入口的，在C/C++中，程序的入口即main()函数。而python中，并没有定义main()数作为入口，而是直接写逻辑程序即可逐行执行。但实际上，如果一段逻辑程序代码不包含于任何函数中，是可以理解为这些程序代码是包含于main()函数中的，程序的入口，仍然还是main()函数。</p>
+<p>函数定义实例:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#------------------</span></span><br><span class="line"><span class="comment"># 基本格式如下：</span></span><br><span class="line"><span class="comment"># def 函数名(参数列表):</span></span><br><span class="line"><span class="comment">#	函数体</span></span><br><span class="line"><span class="comment"># 下为实际代码示例：</span></span><br><span class="line"><span class="comment">#------------------</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function</span><span class="params">(args)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment"># 注意事项：</span></span><br><span class="line"><span class="comment">#	函数名和参数名属于标识符(具有特殊意义的关键词)的一类，且均为自定义</span></span><br><span class="line"><span class="comment">#	一般以下划线开头及结尾的，如_init_为构造函数，一般避免如此命名</span></span><br><span class="line"><span class="comment">#	自定义时，应考虑解释器对编码的支持程度，部分编译器不支持汉字，一般也要避免汉字的使用</span></span><br><span class="line"><span class="comment">#	特殊字符也要避免使用，如、￥@等</span></span><br></pre></td></tr></table></figure>
 
+<hr>
+</li>
+<li><p>函数的执行：</p>
+<p>让程序执行一个函数内的代码成为函数的调用。</p>
+<p>调用函数实例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#------------------</span></span><br><span class="line"><span class="comment"># 基本格式如下:</span></span><br><span class="line"><span class="comment"># 函数名(代入的参数列表)</span></span><br><span class="line"><span class="comment"># 下为实际代码示例</span></span><br><span class="line"><span class="comment">#------------------</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function</span><span class="params">(args)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">function(args)</span><br><span class="line"><span class="comment"># 注意事项</span></span><br><span class="line"><span class="comment">#	Python标识符区分大小写，如定义的函数名为function,若调用时为Function，不会执行function函数</span></span><br><span class="line"><span class="comment">#	若调用的函数为导入函数，一般调用程序格式为：模块名.函数名(带入的参数列表)</span></span><br><span class="line"><span class="comment">#	其实很多时候会将“模块名.”省略，但个人推荐写法是不省略</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="/2020/python3-1/">第一章</a>的代码，主要就是在调用turtle内的各个函数，以实现各个功能：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 调用模块turtle中的color函数</span></span><br><span class="line"><span class="comment"># 实现功能是为“画笔”设置为灰色(gray)</span></span><br><span class="line">turtle.color(<span class="string">"gray"</span>)</span><br><span class="line"><span class="comment"># 调用模块turtle中的forward函数</span></span><br><span class="line"><span class="comment"># 实现功能是为"画笔"向当前其所指方向移动50单位的距离</span></span><br><span class="line">turtle.forward(<span class="number">50</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+</li>
+<li><p>类定义</p>
+<p>函数一般用于包含逻辑代码，而类却是能够包含函数的一种结构</p>
+<p>类的详情解释要在后面才能学到。</p>
+<hr>
+</li>
+<li><p>主程序语句块</p>
+<p>主程序在C/C++的理解中即main函数的程序，在python中即不属于任何函数的程序</p>
+<p>如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 补充：print() 是 python 输出函数 ， 主要用于输出程序结果</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">print</span> (<span class="string">"printed by function"</span>)</span><br><span class="line">print(<span class="string">"printed by main"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在python中，缩进能表示该行代码的所属，用以上程序作为例子，第二行代码有一个单位的缩进，则要向上寻找结构定义的程序，向上一行为函数function定义，则表示第二行代码属于function。</p>
+<p>第三行代码并没有缩进，则表示该行代码不属于任何已定义的函数，则可以理解为该行属于主程序代码，即相当于C/C++中的main函数程序代码。</p>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>变量：</p>
+<p>与C/C++等类型编程语言不同，Python的变量不需要声明。</p>
+<p>变量可以直接定义，且必须赋值，只有赋值之后该变量才会被识别并创建</p>
+<p>如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义函数f(x) = x + 1 ， 并输出 x 的结果</span></span><br><span class="line"><span class="comment"># -----------------------------------</span></span><br><span class="line"><span class="comment"># 定义函数f(x)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x + <span class="number">1</span></span><br><span class="line"><span class="comment"># 定义y ， 并且赋值 y = f(3)</span></span><br><span class="line">y = f(<span class="number">3</span>)</span><br><span class="line"><span class="comment"># 输出y</span></span><br><span class="line">print(y)</span><br></pre></td></tr></table></figure>
+
+<hr>
+</li>
+<li><p>标准数据类型</p>
+<p>Python中包含6个标准的数据类型：</p>
+<ul>
+<li>Number  (数字)</li>
+<li>String  (字符串)</li>
+<li>List  (列表)</li>
+<li>Tuple  （元组)</li>
+<li>Set  (集合)</li>
+<li>Dictionary (字典)</li>
+</ul>
+<p>六个标准数据类型又可以下划分：</p>
+<ul>
+<li><p>不可变数据：Number 、String 、Tuple</p>
+</li>
+<li><p>​    可变数据：List、Dictionary、Set</p>
+<p>深入数据类型的推荐学习<a href="2020/dataStructure-1">《数据结构与算法》</a></p>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>基本数据类型</p>
+<ul>
+<li><p>Number</p>
+<p>Python3 支持四种Number类型：int 、float 、bool 、complex</p>
+<ul>
+<li><p>int ：整形，初学可理解为整数类型</p>
+<p>支持十进制、二进制(OB)、八进制(OO)、十六进制(Ox)</p>
+<hr>
+</li>
+<li><p>float ：浮点型，初学可理解为浮点类型</p>
+<hr>
+</li>
+<li><p>bool ：布尔型，初学可理解为条件类型(真或假、是或否)</p>
+<p>bool取值范围是：False 、True 两个关键字</p>
+<p>在C语言和python2中不存在这种类型，则用数字1表示True，用数字0表示False</p>
+<hr>
+</li>
+<li><p>complex ：复数型，顾名思义</p>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>String</p>
+<p>字符串类型，用于存储一定字符的类型。</p>
+<p>定义时需要引号，如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 =   <span class="string">'这是字符串1'</span></span><br><span class="line">str2 =   <span class="string">"这是字符串2"</span></span><br><span class="line">str3 = <span class="string">'''这是字符串3'''</span></span><br><span class="line"><span class="comment"># 三个单引号所定义的字符串变量可以换行</span></span><br></pre></td></tr></table></figure>
+
+<p>字符串操作：</p>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="center">操作符</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">a + b</td>
+<td align="center">连接两个字符串</td>
+</tr>
+<tr>
+<td align="center">a * n</td>
+<td align="center">复制n次字符串</td>
+</tr>
+<tr>
+<td align="center">a in s</td>
+<td align="center">如果a是s的子串，返回True，否则返回False</td>
+</tr>
+<tr>
+<td align="center">str[i]</td>
+<td align="center">索引，返回第i个字符</td>
+</tr>
+<tr>
+<td align="center">str[n:m]</td>
+<td align="center">切片，返回str字符中第n到m-1个字符构成的字串</td>
+</tr>
+</tbody></table>
+<p>转义字符：<a href="https://www.cnblogs.com/luckyplj/p/9792658.html" target="_blank" rel="noopener">python中各种转义字符</a></p>
+<hr>
 </li>
 </ul>
 </li>
 </ul>
+<h3 id="后述"><a href="#后述" class="headerlink" title="后述"></a>后述</h3><p>本文仅用于个人笔记，阅读参考于<a href="https://www.chaoxing.com/" target="_blank" rel="noopener">超星 - Python程序设计(林清滢等)</a></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
