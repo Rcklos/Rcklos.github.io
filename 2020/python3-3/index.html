@@ -5,12 +5,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>电路原理（一） - RCKLOS</title>
+    <title>Python3(三) - RCKLOS</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="RCKLOS,"> 
-    <meta name="description" content="What is description?,电路原理（一）前言电路原理是电气、电子等专业中最为基础的一门，虽然前段时间也已经学到了课程的一半，但当我提笔推导时，却屡次碰壁，因此决定分支出电路原理专题，专门用于记写电路原理的笔记、经验、感悟心得,"> 
+    <meta name="description" content="What is description?,前言虽然学过python，但不系统，以此想跟着课程学习，记以此笔记
+目录第一章 初识Python程序
+第二章 程序基本构成
+第三章 控制结构
+第四章 函数
+第五章 复合数据类型
+第六章 文件读写
+第,"> 
     <meta name="author" content="RCKLOS"> 
     <link rel="alternative" href="atom.xml" title="RCKLOS" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -40,7 +47,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">电路原理（一）</h3>
+    <h3 class="subtitle">Python3(三)</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -58,63 +65,29 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">电路原理（一）</h1>
+        <h1 class="title">Python3(三)</h1>
         <div class="stuff">
-            <span>二月 27, 2020</span>
+            <span>二月 29, 2020</span>
             
-  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" rel="tag">嵌入式</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E6%A8%A1%E7%94%B5%E6%95%B0%E7%94%B5/" rel="tag">模电数电</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%94%B5%E8%B7%AF%E5%8E%9F%E7%90%86/" rel="tag">电路原理</a></li></ul>
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <h3 id="电路原理（一）"><a href="#电路原理（一）" class="headerlink" title="电路原理（一）"></a>电路原理（一）</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>电路原理是电气、电子等专业中最为基础的一门，虽然前段时间也已经学到了课程的一半，但当我提笔推导时，却屡次碰壁，因此决定分支出电路原理专题，专门用于记写电路原理的笔记、经验、感悟心得。</p>
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>虽然学过python，但不系统，以此想跟着课程学习，记以此笔记</p>
+<h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><p><a href="/2020/Python3-1/">第一章 初识Python程序</a></p>
+<p><a href="/2020/python3-2/">第二章 程序基本构成</a></p>
+<p><a href="/2020/python3-3/">第三章 控制结构</a></p>
+<p><a href="/2020/python3-4/">第四章 函数</a></p>
+<p><a href="/2020/python3-5/">第五章 复合数据类型</a></p>
+<p><a href="/2020/python3-6/">第六章 文件读写</a></p>
+<p><a href="/2020/python3-7/">第七章 数据可视化</a></p>
+<p><a href="/2020/python3-8/">第八章 图像处理</a></p>
 <hr>
-<h4 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h4><p><a href="https://www.bilibili.com/video/av85773407" target="_blank" rel="noopener">电路原理视频课程</a></p>
-<hr>
-<h4 id="数学基础"><a href="#数学基础" class="headerlink" title="数学基础"></a>数学基础</h4><p><a href="https://www.bilibili.com/video/av64383875?from=search&seid=1394807078705932071" target="_blank" rel="noopener">高数视频课程</a></p>
-<p><a href="https://www.icourse163.org/search.htm?search=线性代数#/" target="_blank" rel="noopener">线性代数慕课</a> </p>
-<hr>
-<h4 id="电路"><a href="#电路" class="headerlink" title="电路"></a>电路</h4><h5 id="电路构成："><a href="#电路构成：" class="headerlink" title="电路构成："></a>电路构成：</h5><p>源、负载、能量及信号处理电路、开关及电路</p>
-<h5 id="看待电路："><a href="#看待电路：" class="headerlink" title="看待电路："></a>看待电路：</h5><ol>
-<li>根据负载划分：<ol>
-<li>阻性电路：负载全部都由电阻构成</li>
-<li>动态电路：包括电容元件<ol>
-<li>暂态分析：对动态电路变化过程分析电压和电流</li>
-<li>稳态分析：对动态电路变化前后分析电压和电流</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>根据电源划分：<ol>
-<li>直流电路：电源为直流源</li>
-<li>交流电路：电源为交流源</li>
-</ol>
-</li>
-</ol>
-<h5 id="电路的模型"><a href="#电路的模型" class="headerlink" title="电路的模型"></a>电路的模型</h5><ol>
-<li>基本理想电路元件 — 二端元件：<ol>
-<li>电阻(resistor)</li>
-<li>电感(inductor)</li>
-<li>电容(capacitor)</li>
-<li>电源(source)</li>
-</ol>
-</li>
-<li>建模：<ul>
-<li>抽象建模</li>
-</ul>
-</li>
-</ol>
-<h5 id="电路的分类"><a href="#电路的分类" class="headerlink" title="电路的分类"></a>电路的分类</h5><ul>
-<li>线性<ul>
-<li>激励为电压响应为电流则为线性关系 — 欧姆定律满足线性关系</li>
-</ul>
-</li>
-<li>非线性</li>
-</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="http://m8.music.126.net/20200225154404/f63407a9c9288288eac7d878ab9d07fd/ymusic/4b15/d1df/2f74/7966af4d2d678a93e43257c00d8fbc11.mp3">
+                <source type="audio/mpeg" src="http://domain.com/awesome.mp3">
             </audio>
             
         </div>
