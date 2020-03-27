@@ -5,12 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hello World - RCKLOS</title>
+    <title>电路原理（一） - RCKLOS</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="RCKLOS,"> 
-    <meta name="description" content="What is description?,Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any pr,"> 
+    <meta name="description" content="What is description?,因为我想，所以我能
+
+
+电路原理1.1 电路和电路模型
+电路：若干个电器设备和电器原件按一定方式组合起来所构成的电流的通路
+
+
+电路模型：将实际电路的元器件用理想电路元件适当组合而成的模型
+
+电路四,"> 
     <meta name="author" content="RCKLOS"> 
     <link rel="alternative" href="atom.xml" title="RCKLOS" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -40,7 +49,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;" data-url="https://rcklos.github.io"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">Hello World</h3>
+    <h3 class="subtitle">电路原理（一）</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -58,55 +67,214 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">Hello World</h1>
+        <h1 class="title">电路原理（一）</h1>
         <div class="stuff">
-            <span>二月 25, 2020</span>
+            <span>三月 27, 2020</span>
             
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%94%B5%E8%B7%AF/" rel="tag">电路</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E7%A1%AC%E4%BB%B6/" rel="tag">硬件</a></li></ul>
+
 
         </div>
         <div class="content markdown">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+            <p>因为我想，所以我能</p>
+<a id="more"></a>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h1 id="电路原理"><a href="#电路原理" class="headerlink" title="电路原理"></a>电路原理</h1><h3 id="1-1-电路和电路模型"><a href="#1-1-电路和电路模型" class="headerlink" title="1.1 电路和电路模型"></a>1.1 电路和电路模型</h3><ul>
+<li><p>电路：若干个电器设备和电器原件按一定方式组合起来所构成的电流的通路</p>
+<hr>
+</li>
+<li><p>电路模型：将实际电路的元器件用理想电路元件适当组合而成的模型</p>
+<ul>
+<li>电路四大构件：电源、负载、能量/信号处理电路（传输控制器件）、开关导线</li>
+<li>理想电路元件：实际上在不同应用场景同一部件表示不同形式<ul>
+<li>电阻元件：小号电能的元件</li>
+<li>电感元件：产生磁场、储存磁场能量的元件</li>
+<li>电容元件：产生电场、储存电场能量的元件</li>
+<li>电容元件：将其它形式的能量转变为电能的元件</li>
+</ul>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>Regard circuits:</p>
+<ul>
+<li><p>Load </p>
+<ul>
+<li>Resistive</li>
+<li>Dynamic<ul>
+<li>capacitance<ul>
+<li>transient</li>
+<li>steady state</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>Source</p>
+<ul>
+<li>DC</li>
+<li>AC<ul>
+<li>Sine</li>
+<li>Periodical</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>电路的分类：</p>
+<ol>
+<li><p>线性：激励与相应之间为线性关系</p>
+<ul>
+<li>满足齐次性和可加性</li>
+</ul>
+</li>
+<li><p>非线性：只要有一个或多个负载不满足线性关系</p>
+<hr>
+</li>
+<li><p>平面电路：总有一次重画出现元件之间不会有交叠关系</p>
+</li>
+<li><p>非平面电路：不论如何重画，总会有交叠关系的存在</p>
+</li>
+</ol>
+<hr>
+</li>
+<li><p>支路变量：</p>
+<ul>
+<li><p>电流：带正电粒子有规则的定向运动</p>
+<ul>
+<li>AC：随时间变化</li>
+<li>DC：不随时间变化</li>
+</ul>
+</li>
+<li><p>电压：电场力在单位正电荷移动时所做的功</p>
+<ul>
+<li>单位正电荷所吸收的能量</li>
+</ul>
+</li>
+<li><p>电位：某一点到参考点的电压</p>
+<ul>
+<li>参考点的电位为ZERO</li>
+</ul>
+</li>
+<li><p>电动势：非电场力将单位正电荷移动时所作的功</p>
+<ul>
+<li>电压区别：电动势使某电位具有能量提升</li>
+</ul>
+<hr>
+</li>
+<li><p>支路变量参考方向:<em><del>主要是电桥，正弦激励</del></em></p>
+<ul>
+<li><p>电流</p>
+<ul>
+<li><p>表示方法</p>
+<ol>
+<li>箭头</li>
+<li>下标</li>
+</ol>
+</li>
+<li><p>实际方向</p>
+<ul>
+<li><p>i &gt; 0 ： 参考方向与实际方向相同</p>
+</li>
+<li><p>i &lt; 0 ： 参考方向与实际方向不同<br>$$<br>i = \frac{dq}{dt}<br>$$</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>电压</p>
+<ul>
+<li><p>表示方法</p>
+<ol>
+<li>箭头</li>
+<li>正负号</li>
+<li>双下标</li>
+</ol>
+</li>
+<li><p>实际方向</p>
+<ul>
+<li><p>u &gt; 0 ： ~</p>
+</li>
+<li><p>u &lt; 0 ： ~<br>$$<br>u = \frac{dw}{dq}<br>$$</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>电动势</p>
+<ul>
+<li>表示方法：<ol>
+<li>箭头</li>
+<li>正负号</li>
+<li>双下标</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>关联参考方向：</p>
+<ul>
+<li>关联：电流从电压正端流入</li>
+<li>非关联：电流从电压负端流入</li>
+</ul>
+<hr>
+</li>
+<li><p>功率：单位时间内能量的变化</p>
+<ul>
+<li>$$<br>P = \frac{dw}{dt}=\frac{dw}{dq}·\frac{dq}{dt}<br>$$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- $$
+  P_d = P_a
+  $$
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+- 关联：absorb
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+  - P &gt; 0 ：吸收
+  - P &lt; 0 ：放出
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+- 非关联：deliver
+  - P &gt; 0 ：放出
+  - P &lt; 0 ：吸收
+
+-----</code></pre><ul>
+<li><p>电阻：无论电压、电流参考方向如何定义，其始终吸收功率</p>
+<ul>
+<li><p>电阻：将电能转变为热、其它能</p>
+</li>
+<li><p>电阻器：具有电阻作用的元器件</p>
+</li>
+<li><p>电导</p>
+<ul>
+<li>$$<br>G = \frac{1}{R}<br>$$</li>
+</ul>
+</li>
+</ul>
+<hr>
+</li>
+<li><p>独立电源：</p>
+<ul>
+<li><p>独立电压源：</p>
+<p><img src="/2020/circuit1-1/../../Desktop/voltage.jfif" alt></p>
+</li>
+</ul>
+</li>
+</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="">
+                <source type="audio/mpeg" src="http://domain.com/awesome.mp3">
             </audio>
-            
-                <ul id="audio-list" style="display:none">
-                    
-                        
-                            <li title='0' data-url='http://m8.music.126.net/20200225154404/f63407a9c9288288eac7d878ab9d07fd/ymusic/4b15/d1df/2f74/7966af4d2d678a93e43257c00d8fbc11.mp3'></li>
-                        
-                    
-                        
-                            <li title='1' data-url='http://s320.xiami.net/169/7169/585355777/1772360371_1549700633404_9621.mp3?ccode=xiami_mac_&expire=86400&duration=266&psid=5a755ef6c32995c1ee5fc814cbee2b84&ups_client_netip=47.56.67.190&ups_ts=1582615203&ups_userid=0&utid=&vid=1772360371&fn=1772360371_1549700633404_9621.mp3&vkey=B8895bee50071bbbf44306f4172f9eaa6'></li>
-                        
-                    
-                        
-                            <li title='2' data-url='/v'></li>
-                        
-                    
-                        
-                            <li title='3' data-url='http://m7.music.126.net/20200225154746/a37349fef517d2f38e23e39104f256bf/ymusic/075e/0609/010e/04519d61421c5c864e266dcf709f4514.mp3'></li>
-                        
-                    
-                        
-                            <li title='4' data-url='http://m7.music.126.net/20200225155004/09ab14815974d9e59b03a92db370165c/ymusic/0758/550f/545f/028d3b9421be8425d60dc57735cf6ebc.mp3'></li>
-                        
-                    
-                </ul>
             
         </div>
         
